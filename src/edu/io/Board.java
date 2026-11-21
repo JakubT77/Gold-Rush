@@ -37,4 +37,16 @@ public class Board {
             System.out.println();
         }
     }
+
+    public boolean isInside(int row, int col) {
+        if (row >= 0 && row < size && col >= 0 && col < size) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void clearField(int row, int col) {
+        grid[row][col] = new Token("・");
+    }
 }
